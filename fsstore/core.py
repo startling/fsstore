@@ -49,6 +49,10 @@ class Store(object):
         """
         return os.path.join(self.path, name)
 
+    def get_file(self, name):
+        "Given a key, return the file object that points to its file."
+        return open(self.get_path(name))
+
     def keys(self):
         "Return an iterator of all the keys this thing has."
         for item in os.listdir(self.path):
