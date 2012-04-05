@@ -48,3 +48,9 @@ class TestInterface(unittest.TestCase):
         second = Store(self.tempdir)
         self.fs["constant"] = "5"
         self.assertEquals(self.fs["constant"], second["constant"])
+
+    def test_get_file(self):
+        self.fs["x"] = "yz"
+        with self.fs.get_file("x") as f:
+            self.assertEquals(f.read(), self.fs["x"], "yz")
+
