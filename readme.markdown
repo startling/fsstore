@@ -1,5 +1,10 @@
-This is a `fsstore`, an easy way to use dict-like objects for file I/O. It's pretty simple:
+This is a fsstore, an easy way to use dict-like objects for file I/O. 
 
+fsstore _isn't_ intended to be a replacement for databases. You can't easily (efficiently) search for objects with x attribute. There are only two types of objects -- strings and dicts of strings, which map to files and directories.
+
+Instead, it's supposed to be an alternative to full-fledged databases for when you only need key-value pairs with a tiny api.
+
+It's pretty simple: 
 ````python
 # -*- coding: utf-8 -*-
 
