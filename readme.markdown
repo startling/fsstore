@@ -82,7 +82,7 @@ pip install fsstore
 or directly from this git repository:
 
 ````sh
-pip install git+https://startling@github.com/startling/fsstore.git
+pip install git+https://github.com/startling/fsstore.git
 ````
 
 ## License
