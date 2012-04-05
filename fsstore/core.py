@@ -32,7 +32,7 @@ class Store(object):
         If this is expected to be a long string (something you wouldn't want to keep entirely
         in memory), you'll want to use something else.
         """
-        d = os.path.join(self.path, name)
+        d = self.get_path(name)
         # if it's a directory, return a Store of it.
         if os.path.isdir(d):
             return Store(d)
@@ -42,6 +42,12 @@ class Store(object):
                 return f.read()
         else:
             return default
+    
+    def get_path(self, name):
+        """A convenience method that returns the path to the file under this
+        Store, given a key.
+        """
+        return os.path.join(self.path, name)
 
     def keys(self):
         "Return an iterator of all the keys this thing has."
@@ -52,7 +58,7 @@ class Store(object):
         """Set an item and create a file or directory for it, depending what
         kind of thing it is.
         """
-        d = os.path.join(self.path, name)
+        d = self.get_path(name)
         # delete anything there already -- this is assignment, anyway.
         if os.path.isdir(d):
             shutil.rmtree(d)
