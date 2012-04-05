@@ -5,6 +5,7 @@ fsstore _isn't_ intended to be a replacement for databases. You can't easily (ef
 Instead, it's supposed to be an alternative to full-fledged databases for when you only need key-value pairs with a tiny api.
 
 It's pretty simple: 
+
 ````python
 # -*- coding: utf-8 -*-
 
