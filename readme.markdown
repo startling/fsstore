@@ -84,3 +84,7 @@ or directly from this git repository:
 ````sh
 pip install git+https://startling@github.com/startling/fsstore.git
 ````
+
+## License
+
+fsstore is released under the MIT (Expat) license; see the file `LICENSE` in this directory for more information.
