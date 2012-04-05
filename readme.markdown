@@ -70,3 +70,17 @@ testing
     ├── β
     └── γ
 ````
+
+## Installation
+
+You can install fsstore from PyPI:
+
+````sh
+pip install fsstore
+````
+
+or directly from this git repository:
+
+````sh
+pip install git+https://startling@github.com/startling/fsstore.git
+````
