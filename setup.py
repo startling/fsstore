@@ -3,7 +3,7 @@ from distutils.core import setup
 
 setup(
     name = "fsstore",
-    version = "0.01.0dev",
+    version = "0.01.1dev",
     author = "startling",
     author_email = "tdixon51793@gmail.com",
     packages = ["fsstore"],
