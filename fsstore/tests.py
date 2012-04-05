@@ -42,3 +42,9 @@ class TestInterface(unittest.TestCase):
         self.fs["dir"] = "an old thing."
         self.fs["dir"] = {"x": {"y": "z"}}
         self.assertEquals(self.fs["dir"]["x"]["y"], "z")
+
+    def test_resume(self):
+        "Test that results are constant across Stores."
+        second = Store(self.tempdir)
+        self.fs["constant"] = "5"
+        self.assertEquals(self.fs["constant"], second["constant"])
